@@ -1,0 +1,3 @@
+[ -f /opt/homebrew/bin/fish ] && exec /opt/homebrew/bin/fish
+[ -f /home/linuxbrew/.linuxbrew/bin/fish ] && exec /home/linuxbrew/.linuxbrew/bin/fish
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
