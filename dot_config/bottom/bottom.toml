@@ -1,0 +1,82 @@
+# [styles]
+# theme = "default"
+#
+# [styles.widgets]
+# border_color = "#a9a9a9"
+# selected_border_color = "#87cefa"
+# widget_title = { color = "#696969", bg_color = "#f0f8ff", bold = true }
+# text = { color = "#696969", bg_color = "#ffffff", bold = false }
+# selected_text = { color = "#4682b4", bg_color = "#f0f8ff", bold = true }
+# disabled_text = { color = "#d3d3d3", bg_color = "#ffffff", bold = false }
+#
+# [styles.tables]
+# headers = { color = "#696969", bg_color = "#f0f8ff", bold = true }
+#
+# [styles.graphs]
+# graph_color = "#696969"
+# legend_text = { color = "#696969", bg_color = "#f0f8ff", bold = true }
+#
+# [styles.cpu]
+# all_entry_color = "#696969"
+# avg_entry_color = "#87cefa"
+# cpu_core_colors = ["#ffb6c1", "#98fb98", "#add8e6", "#dda0dd", "#afeeee", "#ffffe0"]
+#
+# [styles.memory]
+# ram_color = "#add8e6"
+# cache_color = "#d3d3d3"
+# swap_color = "#dda0dd"
+# arc_color = "#afeeee"
+# gpu_colors = ["#ffb6c1", "#98fb98", "#add8e6"]
+#
+# [styles.network]
+# rx_color = "#98fb98"
+# tx_color = "#ffb6c1"
+# rx_total_color = "#696969"
+# tx_total_color = "#696969"
+#
+# [styles.battery]
+# high_battery_color = "#98fb98"
+# medium_battery_color = "#ffffe0"
+# low_battery_color = "#ffb6c1"
+
+[styles]
+theme = "default"
+
+[styles.widgets]
+border_color = "black"
+selected_border_color = "blue"
+widget_title = { color = "black", bg_color = "grey", bold = true }
+text = { color = "black", bg_color = "white", bold = false }
+selected_text = { color = "blue", bg_color = "grey", bold = true }
+disabled_text = { color = "gray", bg_color = "white", bold = false }
+
+[styles.tables]
+headers = { color = "black", bg_color = "grey", bold = true }
+
+[styles.graphs]
+graph_color = "black"
+legend_text = { color = "black", bg_color = "grey", bold = true }
+
+[styles.cpu]
+all_entry_color = "black"
+avg_entry_color = "blue"
+cpu_core_colors = ["red", "green", "blue", "magenta", "cyan", "yellow"]
+
+[styles.memory]
+ram_color = "blue"
+cache_color = "gray"
+swap_color = "magenta"
+arc_color = "cyan"
+gpu_colors = ["red", "green", "blue"]
+
+[styles.network]
+rx_color = "green"
+tx_color = "red"
+rx_total_color = "black"
+tx_total_color = "black"
+
+[styles.battery]
+high_battery_color = "green"
+medium_battery_color = "yellow"
+low_battery_color = "red"
+
