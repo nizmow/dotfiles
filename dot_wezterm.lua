@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.font = wezterm.font("FiraCode Nerd Font", { weight = 490 })
+config.font = wezterm.font("BlexMono Nerd Font", { weight = 490 })
 config.font_size = 13
 config.line_height = 1.3
 --config.color_scheme = "Alabaster"
