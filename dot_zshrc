@@ -1,3 +1,16 @@
-[ -f /opt/homebrew/bin/fish ] && exec /opt/homebrew/bin/fish
-[ -f /home/linuxbrew/.linuxbrew/bin/fish ] && exec /home/linuxbrew/.linuxbrew/bin/fish
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.zsh/snap/znap.zsh
+
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-syntax-highlighting
+znap source Aloxaf/fzf-tab
+
+# Starship
+eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# Completion
+autoload -Uz compinit && compinit
