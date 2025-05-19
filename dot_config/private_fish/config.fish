@@ -2,6 +2,7 @@ if status is-interactive
   # Path
   fish_add_path -p ~/.toolbox/bin
   fish_add_path -p ~/.bin
+  fish_add_path -p /opt/atlassian/bin
 
   # Activate homebrew
   if test -x /opt/homebrew/bin/brew
@@ -11,9 +12,10 @@ if status is-interactive
   end
 
   # Activate mise (from homebrew)
-  if type -q mise
-    mise activate fish | source
-  end
+  # According to the docs we do NOT need to do this?
+  # if type -q mise
+  #   mise activate fish | source
+  # end
 
   # Activate zoxide (from homebrew)
   if type -q zoxide
@@ -25,6 +27,9 @@ if status is-interactive
     starship init fish | source
   end
 
+  if type -q fzf
+    fzf --fish | source
+  end
 
   # VSCode integration
   string match -q "$TERM_PROGRAM" "vscode"
