@@ -1,16 +1,53 @@
 source ~/.zsh/snap/znap.zsh
 
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 znap source Aloxaf/fzf-tab
+znap source jeffreytse/zsh-vi-mode
+
+# Prevent zsh-vi-mode breaking fzf's ctrl-r
+# But we're using atuin for now anyway.
+# function zvm_after_init() {
+#  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# }
+
+# znap eval caches in ${XDG_CACHE_HOME:-$HOME/.cache}/zsh-snap/eval
+# Cache will be invalidated if command changes, or clear there if required.
 
 # Starship
-eval "$(starship init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# eval "$(starship init zsh)"
+znap eval starship 'starship init zsh'
 
 # zoxide
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
+znap eval zoxide 'zoxide init zsh'
+
+# mise
+#eval "$(mise activate)"
+znap eval mise 'mise activate zsh'
+
+# Set up some nicer copilot aliases
+znap eval copilot 'gh copilot alias -- zsh'
+
+# Set up atuin
+znap eval atuin 'atuin init zsh'
 
 # Completion
 autoload -Uz compinit && compinit
+
+
+export PATH="/opt/atlassian/bin:~/.toolbox/bin:~/.bin:$PATH"
+export PATH="/Users/nhoughton/.orbit/bin:$PATH"
+
+# atuin
+# . "$HOME/.atuin/bin/env"
+# if [ -x "$(command -v atuin)" ]; then eval "$(atuin init zsh)"; fi
+
+# environment for go/acra-mini
+
+. "$HOME/.local/share/../bin/env"
+
+source ~/.atlassian.env
+
