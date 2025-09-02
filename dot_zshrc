@@ -15,6 +15,7 @@ znap source jeffreytse/zsh-vi-mode
 
 # znap eval caches in ${XDG_CACHE_HOME:-$HOME/.cache}/zsh-snap/eval
 # Cache will be invalidated if command changes, or clear there if required.
+alias znap-reset='rm -rf ${XDG_CACHE_HOME:-$HOME/.cache}/zsh-snap/eval'
 
 # Starship
 # eval "$(starship init zsh)"
@@ -37,17 +38,7 @@ znap eval atuin 'atuin init zsh'
 # Completion
 autoload -Uz compinit && compinit
 
+export PATH="~/.bin:$PATH"
 
-export PATH="/opt/atlassian/bin:~/.toolbox/bin:~/.bin:$PATH"
-export PATH="/Users/nhoughton/.orbit/bin:$PATH"
-
-# atuin
-# . "$HOME/.atuin/bin/env"
-# if [ -x "$(command -v atuin)" ]; then eval "$(atuin init zsh)"; fi
-
-# environment for go/acra-mini
-
-. "$HOME/.local/share/../bin/env"
-
-source ~/.atlassian.env
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
