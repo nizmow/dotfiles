@@ -2,7 +2,7 @@
 
 # Install tools using Homebrew
 if command -v brew >/dev/null 2>&1; then
-  brew install starship fzf zoxide bat eza zsh fd ripgrep gh
+  brew bundle --global
 
   # Install fzf keybindings/completion for zsh
   "$(brew --prefix)/opt/fzf/install" --all --no-bash --no-fish

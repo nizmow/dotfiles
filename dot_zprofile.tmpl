@@ -1,0 +1,13 @@
+{{- if eq .chezmoi.os "darwin" -}}
+# macOS: Homebrew is typically installed to /opt/homebrew on Apple Silicon.
+if [ -f "/opt/homebrew/bin/brew" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+{{- else if eq .chezmoi.os "linux" -}}
+# Linux (Linuxbrew): Installed to /home/linuxbrew/.linuxbrew by default.
+if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+{{- end -}}
+
+
