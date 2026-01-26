@@ -17,6 +17,7 @@
     "light": "One Light",
     "dark": "One Dark",
   },
+  "relative_line_numbers": true,
   "which_key": {
     "enabled": true,
     "delay_ms": 200

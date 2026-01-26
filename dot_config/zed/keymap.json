@@ -3,6 +3,7 @@
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       // General
+      "space space": "file_finder::Toggle",
       "space .": "file_finder::Toggle",
       "space :": "command_palette::Toggle",
       "space /": "workspace::NewSearch",
@@ -37,7 +38,7 @@
 
       // Open / Toggles
       "space o p": "workspace::ToggleLeftDock",
-      "space o t": "workspace::NewTerminal",
+      "space o t": "workspace::ToggleBottomDock",
 
       // Git
       "space g s": "editor::ToggleGitBlame",
