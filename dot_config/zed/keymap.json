@@ -1,0 +1,45 @@
+[
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::Save",
+      "space b b": "tab_switcher::Toggle",
+      "space b k": "pane::CloseActiveItem",
+      "space b n": "pane::ActivateNextItem",
+      "space b p": "pane::ActivatePrevItem",
+      "space w /": "pane::SplitRight",
+      "space w -": "pane::SplitDown",
+      "space w d": "pane::CloseActiveItem",
+      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space /": "workspace::NewSearch",
+      "space :": "command_palette::Toggle",
+      "space g s": "editor::ToggleGitBlame",
+      "space e": "project_panel::ToggleFocus",
+      "space q q": "workspace::CloseWindow"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space :": "command_palette::Toggle",
+      "space q q": "workspace::CloseWindow"
+    }
+  },
+  {
+    "context": "ProjectPanel && vim_mode == normal",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space": null
+    }
+  }
+]
