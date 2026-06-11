@@ -1,0 +1,16 @@
+gui:
+  border: hidden
+  showBottomLine: false
+  showPanelJumps: false
+  showCommandLog: false
+  showRandomTip: false
+  sidePanelWidth: 0.22
+  theme:
+    selectedLineBgColor:
+      - reverse
+
+git:
+  pagers:
+    - pager: >-
+        delta --dark --paging=never --line-numbers --hyperlinks
+        --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
