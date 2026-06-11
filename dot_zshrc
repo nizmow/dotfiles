@@ -1,5 +1,3 @@
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 source ~/.zsh/snap/znap.zsh
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
