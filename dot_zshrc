@@ -4,8 +4,12 @@ if [[ ! -d ~/.zsh/snap/.git ]]; then
 fi
 source ~/.zsh/snap/znap.zsh
 
+zstyle ':znap:*:*' git-maintenance off
+
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
+znap clone zsh-users/zsh-autosuggestions zsh-users/zsh-syntax-highlighting \
+  Aloxaf/fzf-tab jeffreytse/zsh-vi-mode
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 znap source Aloxaf/fzf-tab
@@ -36,9 +40,6 @@ znap eval copilot 'gh copilot alias -- zsh'
 
 # Set up atuin
 znap eval atuin 'atuin init zsh'
-
-# Completion
-autoload -Uz compinit && compinit
 
 export PATH="~/.bin:$PATH"
 
