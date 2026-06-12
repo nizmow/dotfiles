@@ -1,3 +1,7 @@
+if [[ ! -d ~/.zsh/snap/.git ]]; then
+  echo "Installing znap..."
+  git clone --depth 1 https://github.com/marlonrichert/zsh-snap.git ~/.zsh/snap
+fi
 source ~/.zsh/snap/znap.zsh
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk

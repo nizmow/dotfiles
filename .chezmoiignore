@@ -7,11 +7,4 @@
 # third-party zsh plugin trees (installed by znap at runtime, not managed)
 .zsh/Aloxaf/**
 .zsh/zsh-users/**
-.zsh/snap/.git/**
-.zsh/snap/completions/**
-.zsh/snap/functions/**
-.zsh/snap/scripts/**
-.zsh/snap/LICENSE
-.zsh/snap/README.md
-.zsh/snap/.zshrc
-.zsh/snap/.gitignore
+.zsh/snap/**
