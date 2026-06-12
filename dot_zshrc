@@ -7,11 +7,9 @@ znap source zsh-users/zsh-syntax-highlighting
 znap source Aloxaf/fzf-tab
 znap source jeffreytse/zsh-vi-mode
 
-# Prevent zsh-vi-mode breaking fzf's ctrl-r
-# But we're using atuin for now anyway.
-# function zvm_after_init() {
-#  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# }
+function zvm_after_init() {
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
 
 # znap eval caches in ${XDG_CACHE_HOME:-$HOME/.cache}/zsh-snap/eval
 # Cache will be invalidated if command changes, or clear there if required.
@@ -41,8 +39,6 @@ autoload -Uz compinit && compinit
 export PATH="~/.bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-eval "$(mise activate zsh)"
 
 
 
