@@ -43,7 +43,29 @@ znap eval atuin 'atuin init zsh'
 
 export PATH="~/.bin:$PATH"
 
+# eza aliases
+alias ls="eza"
+alias ll="eza -l"
+alias la="eza -a"
+alias tree="eza --tree"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
+
+
+# >>> grok installer >>>
+export PATH="$HOME/.grok/bin:$PATH"
+fpath=(~/.grok/completions/zsh $fpath)
+autoload -Uz compinit && compinit -C
+# <<< grok installer <<<
+
+# yt-dlp via uvx with impersonation
+yt-dlp() {
+  uvx --python 3.12 --refresh --from "yt-dlp[default,curl-cffi]" yt-dlp "$@"
+}
+yt-dlp-nightly() {
+  uvx --python 3.12 --refresh --prerelease allow \
+    --from "yt-dlp[default,curl-cffi]" yt-dlp "$@"
+}
 

@@ -1,3 +1,4 @@
 theme = Alabaster
 font-family = FiraCode Nerd Font Mono Med
 font-size = 14
+shell-integration-features = sudo,ssh-terminfo,ssh-env
