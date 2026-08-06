@@ -2,3 +2,5 @@
 [user]
 	name = Neil Houghton
 	email = neil@nizmow.net
+[pull]
+	rebase = true

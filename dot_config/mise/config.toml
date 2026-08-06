@@ -3,3 +3,9 @@ experimental = true
 
 [settings.dotnet]
 isolated = true
+
+[tools]
+dotnet = "latest"
+node = "24"
+"npm:@earendil-works/pi-coding-agent" = "latest"
+zig = "latest"
